@@ -20,5 +20,15 @@ AWS Glue Athena
 fecha reciente 2021/10/31).
 4. ve a la consola de aws  y selecciona AWS Glue
 5. Selecciona Crawler para descubrir la estructura de los datos del bucket y crearlos.
-6. Crea un nuevo Crawler, dale el nombre de "Crawler-airQuality"
- 
+6. Crea un nuevo Crawler, dale el nombre de "Crawler-airQuality" clic en siguiente
+	- Crawler source Type DataStores
+	- Repeat crawls of s3 data stores selecciona crawl all folders
+	- Crawl data in Specified path in another account y selecciona la ruta del S3 donde esta los archivos,
+	  en este caso seria s3://openaq-fetches/realtime/2021-10-31
+	- en Add another datastore clic en NO.
+7. crear un IAM role AWSGlueServiceRole-nombre
+8. en el schedule para el crawler, seleccionar run on demand.
+9. en database crear una base de datos nueva openai
+10. finalizar
+11. en el listado de los crawler seleccionarlo y dar clic en run crawler
+
